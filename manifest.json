@@ -2,8 +2,20 @@
     "name": "Bootstrap template",
     "version": "0.2.0",
     "description": "Bootstrap template for FOSSBilling - Updated for latest FOSSBilling compatibility",
-	"author": "Ruben Uijtdewilligen",
+    "icon": "screenshot.png",
+    "author": "Ruben Uijtdewilligen",
     "author_url": "https://github.com/rubenuijtdewilligen/fossbilling-bootstrap",
     "homepage_url": "https://github.com/rubenuijtdewilligen/fossbilling-bootstrap",
-	"license": "GNU General Public License v3.0"
+    "license": "GNU General Public License v3.0",
+    "markdown_attributes": {
+        "\\League\\CommonMark\\Extension\\Table\\Table": {
+            "class": "table table-striped table-hover"
+        },
+        "\\League\\CommonMark\\Extension\\CommonMark\\Node\\Inline\\Image": {
+            "class": "img-responsive"
+        },
+        "\\League\\CommonMark\\Extension\\CommonMark\\Node\\Block\\BlockQuote": {
+            "class": "blockquote"
+        }
+    }
 }
