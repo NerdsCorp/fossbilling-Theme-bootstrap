@@ -70,7 +70,7 @@
 		<div class="text-center">
 			<a class="btn btn-default" href="{{ '/support'|link }}"><i class="fa fa-arrow-left"></i> {{ 'Tickets list' | trans }}</a>
 			{% if ticket.status != 'closed' %}
-			<a class="btn btn-success api" type="button" href="{{ 'api/guest/support/ticket_close'|link({'hash' : ticket.hash}) }}" data-api-reload="1" ><i class="fa fa-times"></i> {{ 'Close ticket' | trans }}</a>
+			<a class="btn btn-success api" type="button" href="guest/support/ticket_close?hash={{ ticket.hash }}" data-api-reload="1" ><i class="fa fa-times"></i> {{ 'Close ticket' | trans }}</a>
 			{% endif %}
 		</div>
 {% endblock %}

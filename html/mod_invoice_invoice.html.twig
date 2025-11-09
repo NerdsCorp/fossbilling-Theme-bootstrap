@@ -61,7 +61,7 @@
 				{% endif %}
 
 				{% if request.change_payment_method %}
-					<form method="post" action="{{ 'api/guest/invoice/update'|link }}" class="api-form" data-api-redirect="{{ ('invoice/'~invoice.hash)|link({'auto_redirect' : 1}) }}">
+					<form method="post" action="" class="api-form" data-api-url="guest/invoice/update" data-api-redirect="{{ ('invoice/'~invoice.hash)|link({'auto_redirect' : 1}) }}">
 						<div class="list-group">
 							{% for gtw in guest.invoice_gateways %}
 								{% if invoice.currency in gtw.accepted_currencies %}
