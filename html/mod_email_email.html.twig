@@ -20,7 +20,7 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<ul class="list-inline">
-					<li><strong>{% trans 'Sent' %} | trans }}</strong> {{email.created_at|date('Y-m-d h:i')}}</li>
+					<li><strong>{{ 'Sent' | trans }}</strong> {{email.created_at|date('Y-m-d h:i')}}</li>
 					<li><strong>{{ 'From' | trans }}</strong> {{email.sender}}</li>
 					<li><strong>{{ 'To' | trans }}</strong> {{email.recipients}}</li>
 					<li class="pull-right"><a href="{{ 'api/client/email/resend'|link({'id' : email.id}) }}" data-api-msg="{{ 'Success' | trans }}" class="api btn btn-info btn-sm"><i class="fa fa-repeat"></i> {{ 'Resend' | trans }}</a></li>
