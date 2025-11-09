@@ -163,9 +163,9 @@
 						<div class="well">
 							<p>{{ 'API key allows integration with external applications. You will need this key for authentication.' | trans }}</p>
 							<p>{{ 'Warning! Resetting the key will break existing applications using it.' | trans }}</p>
-							{% if client.client_api_key_get is not empty %}
+							{% if profile.api_token is not empty %}
 								<p class="alert alert-info text-center">
-									<strong>{{ 'Your API key' | trans }}:</strong><br />{{ client.client_api_key_get }}
+									<strong>{{ 'Your API key' | trans }}:</strong><br />{{ profile.api_token }}
 								</p>
 								<form method="post" action="" class="api_form" data-api-url="{{ 'api/client/client/api_key_reset'|link }}" data-api-msg="{{ 'API key was changed. Please refresh the page.' | trans }}">
 									<div class="text-center">
