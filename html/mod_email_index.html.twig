@@ -28,7 +28,7 @@
                     <td>{{email.created_at|date('Y-m-d h:i')}}</td>
                     <td class="actions">
 						<div class="pull-right">
-							<a href="{{ 'api/client/email/delete'|link({'id' : email.id}) }}" data-api-reload="1" class="api btn btn-danger btn-sm"><i class="fa fa-trash"></i> {{ 'Delete' | trans }}</a>
+							<a href="client/email/delete?id={{ email.id }}" data-api-reload="1" class="api btn btn-danger btn-sm"><i class="fa fa-trash"></i> {{ 'Delete' | trans }}</a>
 							<a href="{{ 'email'|link }}/{{email.id}}" class="btn btn-primary btn-sm" ><i class="fa fa-search"></i> {{ 'View' | trans }}</a>
 						</div>
 					</td>

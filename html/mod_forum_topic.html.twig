@@ -28,14 +28,14 @@
 			<li><strong>{{ topic.stats.posts_count }}</strong> {{ 'Messages' | trans }}</li>
 			{% if client %}
 				{% if client.forum_is_favorite({"id":topic.id}) %}
-				<li><a href="{{ 'api/client/forum/favorite_remove'|link({'id' : topic.id}) }}" class="api" data-api-reload="1">Remove from favorites</a></li>
+				<li><a href="client/forum/favorite_remove?id={{ topic.id }}" class="api" data-api-reload="1">Remove from favorites</a></li>
 				{% else %}
-				<li><a href="{{ 'api/client/forum/favorite_add'|link({'id' : topic.id}) }}" class="api" data-api-reload="1">Add to favorites</a></li>
+				<li><a href="client/forum/favorite_add?id={{ topic.id }}" class="api" data-api-reload="1">Add to favorites</a></li>
 				{% endif %}
 				{% if client.forum_is_subscribed({"id":topic.id}) %}
-				<li><a href="{{ 'api/client/forum/unsubscribe'|link({'id' : topic.id}) }}" class="api" data-api-reload="1">Disable notifications for this topic</a></li>
+				<li><a href="client/forum/unsubscribe?id={{ topic.id }}" class="api" data-api-reload="1">Disable notifications for this topic</a></li>
 				{% else %}
-				<li><a href="{{ 'api/client/forum/subscribe'|link({'id' : topic.id}) }}" class="api" data-api-reload="1">Subscribe to notifications</a></li>
+				<li><a href="client/forum/subscribe?id={{ topic.id }}" class="api" data-api-reload="1">Subscribe to notifications</a></li>
 				{% endif %}
 			{% endif %}
 		</ul>

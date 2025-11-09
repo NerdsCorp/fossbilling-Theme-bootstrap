@@ -51,9 +51,9 @@
 	</div>
 	<p class="text-center">
 		{% if order.period %}<a class="btn btn-success" id="renewal-button">{{ 'Renew now' | trans }}</a>{% endif %}
-		<a class="btn btn-info" data-toggle="modal" data-target="#tickets">{{ 'Open ticket' | trans }}</a>			
+		<a class="btn btn-info" data-toggle="modal" data-target="#tickets">{{ 'Open ticket' | trans }}</a>
         {% if upgradables %}<a class="btn btn-warning" data-toggle="modal" data-target="#upgrades">{{ 'Request Upgrade' | trans }}</a>{% endif %}
-		{% if order.status == 'pending_setup' %}<a class="btn btn-danger api" href="{{'api/client/order/delete' | link({'id' : order.id})}}" data-api-redirect="{{ 'order/service'|link }}">{{ 'Cancel' | trans }}</a>{% endif %}
+		{% if order.status == 'pending_setup' %}<a class="btn btn-danger api" href="client/order/delete?id={{ order.id }}" data-api-redirect="{{ 'order/service'|link }}">{{ 'Cancel' | trans }}</a>{% endif %}
 		{% if order.status == 'active' %}<a class="btn btn-danger" data-toggle="modal" data-target="#cancelation">{{ 'Request Cancellation' | trans }}</a>{% endif %}
 	</p>
 
