@@ -43,7 +43,7 @@
 											<div class="list-group-item-text">
 												{% if product.icon_url %}
 												<div class="pull-left" style="max-width: 200px; margin-right: 15px; margin-bottom: 10px;">
-													{{ product.icon_url | img_tag({'class': 'img-responsive img-thumbnail'}) }}
+													<img src="{{ product.icon_url }}" alt="{{ product.title }}" class="img-responsive img-thumbnail">
 												</div>
 												{% endif %}
 												<div style="overflow: hidden; word-wrap: break-word;">
