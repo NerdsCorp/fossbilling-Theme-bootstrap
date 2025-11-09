@@ -44,7 +44,7 @@
 				{% endfor %}
 				{% if ticket.status != "closed" %}
 					<div class="col-sm-10">
-						<form method="post" action="" class="api_form" data-api-url="{{ 'api/client/support/ticket_reply'|link }}" data-api-reload="1">
+						<form method="post" action="" class="api_form" data-api-url="client/support/ticket_reply" data-api-reload="1">
 							<div class="control-group form-group">
 								<div class="controls">
 									<textarea rows="10" cols="100" class="form-control" name="content" maxlength="999" style="resize:none" required="required" data-provide="markdown" data-iconlibrary="fa"></textarea>
