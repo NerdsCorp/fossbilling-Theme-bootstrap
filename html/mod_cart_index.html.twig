@@ -79,11 +79,14 @@
 									<input type="text" class="form-control" name="promocode" id="promocode" value="{{ request.promocode|default(cart.promocode) }}" required="required">
 							</div>
 							{% if cart.promocode %}
-								<a href="guest/cart/remove_promo" class="btn btn-danger btn-sm api-link" data-api-reload="1">{{ 'Reset' | trans }}</a>
+								</form>
+								<form method="post" action="" class="api-form form-inline" data-api-url="guest/cart/remove_promo" data-api-reload="1" style="display:inline;">
+									<button type="submit" class="btn btn-danger btn-sm">{{ 'Reset' | trans }}</button>
+								</form>
 							{% else %}
 								<button class="btn btn-primary btn-sm" type="submit">{{ 'Apply' | trans }}</button>
 							{% endif %}
-						</form></p><br />
+						</p><br />
 					</div>
 					<div class="col-md-6 text-right">
 						<h4>{{ 'Total' | trans }}</h4>

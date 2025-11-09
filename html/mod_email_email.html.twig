@@ -23,8 +23,18 @@
 					<li><strong>{{ 'Sent' | trans }}</strong> {{email.created_at|date('Y-m-d h:i')}}</li>
 					<li><strong>{{ 'From' | trans }}</strong> {{email.sender}}</li>
 					<li><strong>{{ 'To' | trans }}</strong> {{email.recipients}}</li>
-					<li class="pull-right"><a href="client/email/resend?id={{ email.id }}" data-api-msg="{{ 'Success' | trans }}" class="api btn btn-info btn-sm"><i class="fa fa-repeat"></i> {{ 'Resend' | trans }}</a></li>
-					<li class="pull-right"><a href="client/email/delete?id={{ email.id }}" data-api-redirect="{{ '/email'|link }}" class="api btn btn-danger btn-sm"><i class="fa fa-trash"></i> {{ 'Delete' | trans }}</a></li>
+					<li class="pull-right">
+						<form method="post" action="" class="api-form" data-api-url="client/email/resend" data-api-msg="{{ 'Success' | trans }}" style="display:inline;">
+							<input type="hidden" name="id" value="{{ email.id }}">
+							<button type="submit" class="btn btn-info btn-sm"><i class="fa fa-repeat"></i> {{ 'Resend' | trans }}</button>
+						</form>
+					</li>
+					<li class="pull-right">
+						<form method="post" action="" class="api-form" data-api-url="client/email/delete" data-api-redirect="{{ '/email'|link }}" style="display:inline;">
+							<input type="hidden" name="id" value="{{ email.id }}">
+							<button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> {{ 'Delete' | trans }}</button>
+						</form>
+					</li>
 				</ul>
 			</div>
 			<div class="panel-body">
