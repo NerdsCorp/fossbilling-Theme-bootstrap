@@ -32,7 +32,7 @@
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="tab-details">
 						<h4>{{ 'Update profile' | trans }}</h4>
-						<form method="post" action="" class="api_form" data-api-url="{{ 'api/client/client/update'|link }}" data-api-msg="{{ 'Profile updated' | trans }}">
+						<form method="post" action="" class="api_form" data-api-url="client/client/update" data-api-msg="{{ 'Profile updated' | trans }}">
 						<div class="well row">
 							<div class="col-md-6">
 									<div class="control-group form-group">
@@ -120,7 +120,7 @@
 					</div>
                     <div class="tab-pane fade" id="tab-password">
                         <h4>{{ 'Change password' | trans }}</h4>
-						<form method="post" action="" class="api_form" data-api-url="{{ 'api/client/client/change_password'|link }}" data-api-msg="{{ 'Password changed' | trans }}">
+						<form method="post" action="" class="api_form" data-api-url="client/client/change_password" data-api-msg="{{ 'Password changed' | trans }}">
 							<div class="well">
 								<div class="control-group form-group">
 									<div class="controls">
@@ -167,7 +167,7 @@
 								<p class="alert alert-info text-center">
 									<strong>{{ 'Your API key' | trans }}:</strong><br />{{ profile.api_token }}
 								</p>
-								<form method="post" action="" class="api_form" data-api-url="{{ 'api/client/client/api_key_reset'|link }}" data-api-msg="{{ 'API key was changed. Please refresh the page.' | trans }}">
+								<form method="post" action="" class="api_form" data-api-url="client/client/api_key_reset" data-api-msg="{{ 'API key was changed. Please refresh the page.' | trans }}">
 									<div class="text-center">
 										<input class="btn btn-danger" type="submit" value="{{ 'Reset key' | trans }}">
 									</div>
@@ -176,7 +176,7 @@
 								<p class="alert alert-info text-center">
 									<strong>{{ 'No API key yet' | trans }}</strong>
 								</p>
-								<form method="post" action="" class="api_form" data-api-url="{{ 'api/client/client/api_key_reset'|link }}" data-api-msg="{{ 'API key was changed. Please refresh the page.' | trans }}">
+								<form method="post" action="" class="api_form" data-api-url="client/client/api_key_reset" data-api-msg="{{ 'API key was changed. Please refresh the page.' | trans }}">
 									<div class="text-center">
 										<input class="btn btn-success" type="submit" value="{{ 'Create API key' | trans }}">
 									</div>
