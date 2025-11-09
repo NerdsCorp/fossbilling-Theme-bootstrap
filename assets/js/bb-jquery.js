@@ -1,9 +1,22 @@
 var bb = {
+    getCsrfToken: function() {
+        var token = $('meta[name="csrf-token"]').attr('content');
+        return token ? token : '';
+    },
     post: function(url, params, jsonp) {
+        // Add CSRF token to params
+        var csrfToken = bb.getCsrfToken();
+        var data = params;
+        if (typeof params === 'string') {
+            data = params + (params ? '&' : '') + 'CSRFToken=' + encodeURIComponent(csrfToken);
+        } else if (typeof params === 'object') {
+            data = $.extend({}, params, {CSRFToken: csrfToken});
+        }
+
         $.ajax({
             type: "POST",
             url: bb.restUrl(url),
-            data: params,
+            data: data,
             dataType: 'json',
             error: function(jqXHR, textStatus, e) {
                 bb.msg(e, 'error');
@@ -22,10 +35,19 @@ var bb = {
         });
     },
     get: function(url, params, jsonp) {
+        // Add CSRF token to params
+        var csrfToken = bb.getCsrfToken();
+        var data = params;
+        if (typeof params === 'string') {
+            data = params + (params ? '&' : '') + 'CSRFToken=' + encodeURIComponent(csrfToken);
+        } else if (typeof params === 'object') {
+            data = $.extend({}, params, {CSRFToken: csrfToken});
+        }
+
         $.ajax({
             type: "GET",
             url: bb.restUrl(url),
-            data: params,
+            data: data,
             dataType: 'json',
             error: function(jqXHR, textStatus, e) {
                 bb.msg(e, 'error');
