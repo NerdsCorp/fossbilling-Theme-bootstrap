@@ -1,9 +1,9 @@
 {
     "name": "Bootstrap template",
-    "version": "0.1.0",
-    "description": "Blank bootstrap template",
+    "version": "0.2.0",
+    "description": "Bootstrap template for FOSSBilling - Updated for latest FOSSBilling compatibility",
 	"author": "Ruben Uijtdewilligen",
     "author_url": "https://github.com/rubenuijtdewilligen/fossbilling-bootstrap",
-    "homepage_url": "https://github.com/scith/boxbilling-bootstrap",
+    "homepage_url": "https://github.com/rubenuijtdewilligen/fossbilling-bootstrap",
 	"license": "GNU General Public License v3.0"
 }

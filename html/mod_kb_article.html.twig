@@ -22,7 +22,7 @@
 	{{article.content|markdown}}
 	<hr>
 	<div class="well">
-        <h4>{%trans 'Similar articles' %}</h4>
+        <h4>{{ 'Similar articles' | trans }}</h4>
 		<div class="list-group">
 			{% for i, kbarticle in guest.kb_article_get_list({"kb_article_category_id":article.kb_article_category_id, "per_page":5}).list %}
 				<a href="{{ '/kb'|link }}/{{article.category.slug}}/{{kbarticle.slug}}" class="list-group-item">{{kbarticle.title}}</a>
