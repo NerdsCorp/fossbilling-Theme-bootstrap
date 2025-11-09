@@ -102,7 +102,7 @@
 					{% if settings.side_menu_kb and guest.extension_is_on({"mod":"kb"}) %}<li class="visible-xs"><a href="{{ 'kb'|link }}" title="{{ 'Knowledge Base' | trans }}"><i class="fa fa-graduation-cap"></i> {{ 'Knowledge Base' | trans }}</a></li>{% endif %}
 					{% if settings.side_menu_contact %}<li class="visible-xs"><a href="{{ '/support/contact-us'|link }}"><i class="fa fa-envelope"></i> {{ 'Contact us' | trans }}</a></li>{% endif %}
 					{% if client %}
-					{% set profile = client.client_get %}
+					{% set profile = client.profile_get %}
 						{% if settings.side_menu_services %}<li class="visible-xs"><a href="{{ 'order/service'|link }}" title="{{ 'Services' | trans }}"><i class="fa fa-cog"></i> {{ 'Services' | trans }}</a></li>{% endif %}
 						{% if settings.side_menu_support %}<li class="visible-xs"><a href="{{ 'support'|link }}" title="{{ 'Tickets' | trans }}"><i class="fa fa-life-ring"></i> {{ 'Support' | trans }}</a></li>{% endif %}
 						{% if settings.side_menu_invoices %}<li class="visible-xs"><a href="{{ 'invoice'|link }}" title="{{ 'Invoices' | trans }}"><i class="fa fa-credit-card"></i> {{ 'Invoices' | trans }}</a></li>{% endif %}
