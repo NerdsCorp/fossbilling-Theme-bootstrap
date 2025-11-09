@@ -3,7 +3,7 @@
 {% block meta_title %}{{ 'Profile details' | trans }}{% endblock %}
 
 {% import "macro_functions.html.twig" as mf %}
-{% set profile = client.client_get %}
+{% set profile = client.profile_get %}
 
 {% block content_before %}
 		<!-- Page Heading/Breadcrumbs -->
