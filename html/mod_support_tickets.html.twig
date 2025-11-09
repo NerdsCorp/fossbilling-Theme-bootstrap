@@ -65,7 +65,7 @@
 					<h4 class="modal-title" id="myModalLabel">{{ 'Submit new support ticket' | trans }}</h4>
 				</div>
 				<div class="modal-body">
-					<form method="post" action="" class="api_form" data-api-url="client/support/ticket_create" data-api-tocreated="{{ 'support/ticket'|link }}">
+					<form method="post" action="" class="api_form" data-api-url="{{ 'api/client/support/ticket_create'|link }}" data-api-tocreated="{{ 'support/ticket'|link }}">
 						<div class="control-group form-group">
 							<div class="controls">
 								<label>{{ 'Help desk' | trans }}:</label>
