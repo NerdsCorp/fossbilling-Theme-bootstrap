@@ -144,7 +144,7 @@
 			{% endif %}
 			<div class="hidden-xs">{% include "partial_menu.html.twig" %}</div>
 
-			<!--{% set languages = guest.extension_languages %}
+			{# {% set languages = guest.extension_languages %}
 				{% if languages|length > 1 %}
 					<h2>{{ 'Select language' | trans }}</h2>
 							<select name="lang">
@@ -152,7 +152,7 @@
 								<option value="{{ lang }}" >{{ lang|trans }}</option>
 							{% endfor %}
 							</select>
-				{% endif %}-->
+				{% endif %} #}
 			
 			{% block sidebar %}{% endblock %}
 			
