@@ -1,13 +1,13 @@
 
         <div class="total">
             {% if pricing.type == 'free' %}
-            
+
                 {% if product.allow_quantity_select %}
                     <h4>{{ 'Quantity:' | trans }}</h4>
                     <input type="text" name="quantity" value="1" class="form-control"/>
                     <hr/>
                 {% endif %}
-                
+
                 <h2><strong>{{ 'Total price:' | trans }}</strong><br />{{ 0 | money_convert }}</h2>
             {% endif %}
 
@@ -28,7 +28,7 @@
 				<input type="text" name="quantity" value="1" class="form-control"/>
 				<hr/>
 			{% endif %}
-					
+
 			<select name="period" id="period-selector" class="form-control">
 			{% for code,prices in pricing.recurrent %}
 				{% if prices.enabled %}
@@ -37,9 +37,10 @@
 			{% endfor %}
 			</select>
 			<hr>
-			
 
-			{% for code,prices in pricing.recurrent if prices.enabled and prices.setup > 0 %}
+
+			{% for code,prices in pricing.recurrent %}
+				{% if prices.enabled and prices.setup > 0 %}
 					<div class="period {{code}}" style="{% if not loop.first %}display: none;{% endif %}">
 						<table class="table">
 							<tr>
@@ -52,8 +53,9 @@
 							</tr>
 						</table>
 					</div>
+				{% endif %}
 			{% endfor %}
-        
+
         {% endif %}
         </div>
 
