@@ -2,7 +2,7 @@
 
 This is an easily customisable theme for FOSSBilling, based on Bootstrap. It is ported from [@scith](https://github.com/scith)'s Bootstrap theme for BoxBilling.
 
-Please report issues and make suggestions in [this repo's issues section](https://github.com/rubenuijtdewilligen/fossbilling-bootstrap/issues). The theme is licensed under GNU General Public License v3.0.
+Please report issues and make suggestions in [this repo's issues section](https://github.com/Nerdscorp/fossbilling-bootstrap/issues). The theme is licensed under GNU General Public License v3.0.
 
 Currently, Bootstrap v3.3.6 is being used. Part of the porting process will be updating the code to use Bootstrap v5.
 
